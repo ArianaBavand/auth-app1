@@ -1,0 +1,20 @@
+.profile {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.profile h1 {
+  font-size: 5rem;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  margin-top: 1rem;
+  text-align: center;
+}
