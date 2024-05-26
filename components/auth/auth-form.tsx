@@ -93,7 +93,7 @@ export default function AuthForm() {
           />
         </div>
         <div className={classes.actions}>
-          <button>{isLogin ? 'Login' : 'Create Account'}</button>
+          <button>{isLogin ? 'Login' : 'please Create Account'}</button>
           <button
             type="button"
             className={classes.toggle}
