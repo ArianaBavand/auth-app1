@@ -38,8 +38,8 @@ export default function AuthForm() {
 
   function switchAuthModeHandler() {
     setIsLogin((prevState) => !prevState);
-    setError(null); // Clear the error when switching modes
-    setSuccess(null); // Clear the success message when switching modes
+    setError(null);
+    setSuccess(null);
   }
 
   async function submitHandler(event: React.FormEvent<HTMLFormElement>) {
@@ -57,7 +57,7 @@ export default function AuthForm() {
         });
         if (result?.error) {
           setError(result.error || 'Invalid credentials');
-          setSuccess(null); // Clear any previous success message
+          setSuccess(null);
         } else {
           router.replace('/profile');
         }
@@ -66,10 +66,10 @@ export default function AuthForm() {
           const result = await createUser(enteredEmail, enteredPassword);
           console.log(result);
           setSuccess('Sign up successful! You can log in now.');
-          setError(null); // Clear any previous error message
+          setError(null);
         } catch (error: any) {
           setError(error.message || 'Something went wrong');
-          setSuccess(null); // Clear any previous success message
+          setSuccess(null);
         }
       }
     }
