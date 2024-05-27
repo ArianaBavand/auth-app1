@@ -3,7 +3,7 @@ import { connectToDatabase } from '@/lib/db';
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 
-export default NextAuth({
+export const authOptions = {
   session: {},
 
   providers: [
@@ -43,4 +43,6 @@ export default NextAuth({
       },
     }),
   ],
-});
+};
+
+export default NextAuth(authOptions);
